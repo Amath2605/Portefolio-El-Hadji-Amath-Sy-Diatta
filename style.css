@@ -1,0 +1,865 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding-top: 80px; /* Ajustez cette valeur si nécessaire */
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #f7dc6f 0%, #f4d03f 100%);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            margin-right: 8px;
+            position: relative;
+        }
+
+        .logo-text {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .nav-item {
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-item.active {
+            background: #3b82f6;
+            color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-item:not(.active) {
+            background: rgba(255, 255, 255, 0.8);
+            color: #2c3e50;
+            border: 1px solid rgba(44, 62, 80, 0.1);
+        }
+
+        /* Ajuste la marge entre les liens de la barre de navigation */
+        .navbar-nav .nav-item {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .nav-item:not(.active):hover {
+            background: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-item.active:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px;
+            }
+
+            .nav-item {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-menu {
+                width: 100%;
+            }
+            
+            .nav-item {
+                flex: 1;
+                text-align: center;
+                min-width: 80px;
+            }
+        }
+
+
+
+        #accueil {
+    background-color: #f8f9fa; /* Couleur de fond */
+    height: 100vh; /* La hauteur de la section est égale à la hauteur de la fenêtre du navigateur */
+    display: flex; /* Utilise Flexbox pour un alignement facile */
+    align-items: center; /* Aligne le contenu verticalement au centre */
+    padding-top: 56px; /* Ajoute un espace en haut pour compenser la barre de navigation fixe */
+}
+
+#accueil h1 {
+    color: #4b4b4b; /* Couleur du titre */
+}
+
+/* Styles pour les boutons personnalisés */
+#accueil .btn-primary {
+    background-color: #4b4b4b;
+    border-color: #4b4b4b;
+    color: #fff;
+}
+
+#accueil .btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+#accueil .btn-outline-dark {
+    color: #333;
+    border-color: #333;
+}
+
+#accueil .btn-outline-dark:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Styles pour l'image du portrait */
+#accueil .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+#accueil .rounded-circle {
+    border-radius: 50% !important; /* Rendre l'image parfaitement ronde */
+}
+
+#accueil .shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Ajoute une ombre à l'image */
+}
+
+/* Section À propos */
+#a-propos {
+    background-color: #fff; /* White background for this section */
+    padding: 80px 0; /* Add top and bottom padding */
+}
+
+#a-propos h2 {
+    color: #4b4b4b; /* Dark gray color for the main heading */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 2rem; /* Add some space below the heading */
+}
+
+#a-propos p.text-muted {
+    color: #6c757d !important; /* Muted gray color for the sub-heading */
+    margin-bottom: 3rem; /* Add more space below the sub-heading */
+}
+
+#a-propos .card {
+    border: none; /* Remove the card border */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a modern look */
+}
+
+#a-propos .card ul {
+    list-style: none; /* Remove list bullets */
+    padding: 0; /* Remove default padding */
+}
+
+#a-propos .card li {
+    font-size: 1rem; /* Adjust font size for list items */
+}
+
+#a-propos .card i.text-primary {
+    color: #4b4b4b !important; /* Set the icon color to the primary dark gray */
+    font-size: 1.25rem; /* Make the icon a bit larger */
+}
+
+#a-propos .btn-dark {
+    background-color: #4b4b4b; /* Dark gray background for the button */
+    border-color: #4b4b4b; /* Matching border color */
+    color: #fff; /* White text color */
+    padding: 12px 30px; /* Add padding for a larger button */
+}
+
+#a-propos .btn-dark:hover {
+    background-color: #333; /* Darker background on hover */
+    border-color: #333; /* Darker border on hover */
+}
+
+
+/* Section Projets */
+#projets {
+    background-color: #f8f9fa; /* Couleur de fond */
+    padding: 80px 0; /* Ajoute de l'espace en haut et en bas de la section */
+}
+
+#projets h2 {
+    color: #4b4b4b; /* Couleur du titre principal */
+    font-weight: 700;
+    margin-bottom: 3rem; /* Espace sous le titre */
+}
+
+/* Styles pour les boutons de filtre */
+#projets .btn {
+    border: 1px solid #4b4b4b; /* Bordure des boutons */
+    color: #4b4b4b; /* Couleur du texte des boutons */
+    font-weight: 500;
+}
+
+#projets .btn.btn-dark {
+    background-color: #4b4b4b; /* Couleur de fond du bouton actif (Tous) */
+    color: #fff; /* Couleur du texte du bouton actif */
+}
+
+#projets .btn.btn-outline-dark:hover {
+    background-color: #4b4b4b; /* Couleur de fond au survol */
+    color: #fff; /* Couleur du texte au survol */
+}
+
+/* Styles pour les cartes de projet */
+#projets .card {
+    border: none; /* Supprime la bordure par défaut des cartes */
+    border-radius: 8px; /* Ajoute un léger arrondi aux coins */
+}
+
+#projets .card-img-top {
+    border-top-left-radius: 8px; /* Arrondi l'image du haut */
+    border-top-right-radius: 8px;
+}
+
+#projets .card-body {
+    padding: 1.5rem;
+}
+
+#projets .card-title {
+    color: #4b4b4b; /* Couleur du titre du projet */
+    font-weight: 600;
+}
+
+#projets .card-text.text-muted {
+    color: #6c757d !important; /* Couleur du texte de description */
+}
+
+/* Styles pour les badges (étiquettes) */
+#projets .badge.bg-primary {
+    background-color: #4b4b4b !important; /* Couleur de fond des badges */
+    color: #fff;
+    font-weight: normal;
+    padding: 0.5em 1em; /* Ajoute de l'espace à l'intérieur des badges */
+    border-radius: 20px; /* Rend les badges ronds */
+}
+
+#projets .btn.btn-outline-dark {
+    border-color: #4b4b4b; /* Bordure du bouton "Voir le projet" */
+    color: #4b4b4b; /* Couleur du texte */
+}
+
+#projets .btn.btn-outline-dark:hover {
+    background-color: #4b4b4b;
+    color: #fff;
+}
+
+/* compétences */
+/* Section Compétences */
+#competences {
+    background-color: #fff; /* Fond blanc */
+    padding: 80px 0; /* Espacement en haut et en bas */
+}
+
+#competences h2 {
+    color: #4b4b4b; /* Couleur du titre principal */
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+#competences h3 {
+    color: #4b4b4b; /* Couleur des sous-titres */
+    font-weight: 600;
+}
+
+/* Styles pour la barre de progression */
+#competences .progress {
+    height: 10px;
+    border-radius: 5px; /* Arrondir les bords de la barre */
+}
+
+#competences .progress-bar {
+    background-color: #4b4b4b; /* Couleur de la barre de progression */
+}
+
+/* Styles pour la section des outils */
+#competences .col-3 i {
+    color: #4b4b4b !important; /* Couleur des icônes */
+    font-size: 3rem; /* Taille des icônes */
+}
+
+#competences .col-3 p {
+    color: #4b4b4b; /* Couleur du texte sous les icônes */
+    font-weight: 500;
+}
+
+@media (max-width: 991.98px) {
+    #competences .col-lg-6 {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Section Contact */
+#contact {
+    background-color: #f8f9fa; /* Couleur de fond */
+    padding: 80px 0; /* Espacement en haut et en bas */
+}
+
+#contact h2 {
+    color: #4b4b4b; /* Couleur du titre principal */
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+/* Styles pour la partie gauche (informations de contact) */
+#contact .col-lg-6 i {
+    color: #4b4b4b !important; /* Couleur des icônes de contact */
+}
+
+#contact .col-lg-6 h5 {
+    font-size: 1.1rem; /* Taille du titre de contact */
+    font-weight: 600;
+    color: #4b4b4b;
+}
+
+#contact .col-lg-6 p {
+    font-size: 0.95rem; /* Taille du texte de contact */
+    color: #6c757d;
+}
+
+/* Styles pour les icônes de réseaux sociaux */
+#contact .d-flex.mt-4 a {
+    color: #4b4b4b; /* Couleur des icônes de réseaux sociaux */
+    transition: color 0.3s ease;
+}
+
+#contact .d-flex.mt-4 a:hover {
+    color: #333; /* Couleur au survol */
+}
+
+/* Styles pour le formulaire de contact */
+#contact .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 25px; /* Bords arrondis pour les champs de saisie */
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+#contact textarea.form-control {
+    border-radius: 15px; /* Arrondi légèrement différent pour la zone de texte */
+}
+
+#contact .btn-primary {
+    background-color: #4b4b4b;
+    border-color: #4b4b4b;
+    color: #fff;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 25px; /* Bords arrondis pour le bouton d'envoi */
+}
+
+#contact .btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* footer */
+/* Style général du footer */
+.footer {
+  margin-top: 0;
+}
+
+/* Bande jaune */
+.footer-top {
+  background-color: #fff26e; /* jaune */
+  height: 100px;
+}
+
+/* Logo centré */
+.footer-logo {
+  height: 70px;
+  object-fit: contain;
+}
+
+/* Bande bleue */
+.footer-bottom {
+  background-color: #2200ff; /* bleu vif */
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+/* Liens du footer */
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffea00; /* survol = jaune */
+  text-decoration: underline;
+}
+
+/*Page de apropos*/
+
+/* --- Styles pour la section À Propos de AMPRO --- */
+
+/* Conteneur de l'image avec les bordures colorées */
+.ampro-about-image-container {
+    position: relative;
+    padding: 15px; /* Espace pour les bordures */
+    display: inline-block; /* Pour que le padding et les pseudo-éléments fonctionnent bien */
+}
+
+.ampro-about-image-container img {
+    display: block; /* Supprime l'espace sous l'image */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Bordure verte à gauche */
+.ampro-about-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px; /* Épaisseur de la bordure */
+    height: 100%;
+    background-color: #008000; /* Vert */
+    z-index: 1;
+}
+
+/* Bordure jaune en haut */
+.ampro-about-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px; /* Épaisseur de la bordure */
+    background-color: #FFFF00; /* Jaune */
+    z-index: 1;
+}
+
+/* Styles du bouton CONTACTEZ-NOUS */
+#apropos-ampro .btn-primary {
+    background-color: #6a0dad; /* Violet foncé */
+    border-color: #6a0dad;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+#apropos-ampro .btn-primary:hover {
+    background-color: #7b2cde; /* Violet un peu plus clair au survol */
+    border-color: #7b2cde;
+}
+
+/* --- Styles pour la section Mission, Valeurs, Impacts --- */
+
+.ampro-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre légère */
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.ampro-card:hover {
+    transform: translateY(-5px); /* Effet de léger soulèvement au survol */
+}
+
+.ampro-card h4 {
+    color: #333; /* Couleur du titre */
+    font-weight: bold;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+    border: 2px solid; /* Bordure des cercles */
+}
+
+/* Couleurs spécifiques pour chaque icône */
+.ampro-card:nth-child(1) .icon-circle { /* Mission */
+    background-color: #FFFF00; /* Jaune */
+    border-color: #FFFF00;
+    color: #6a0dad; /* Icône violette */
+}
+
+.ampro-card:nth-child(2) .icon-circle { /* Valeurs */
+    background-color: #FFFF00; /* Jaune */
+    border-color: #FFFF00;
+    color: #6a0dad; /* Icône violette */
+}
+
+.ampro-card:nth-child(3) .icon-circle { /* Impacts */
+    background-color: #FFFF00; /* Jaune */
+    border-color: #FFFF00;
+    color: #6a0dad; /* Icône violette */
+}
+
+.ampro-card .icon-circle i {
+    color: #6a0dad; /* Couleur des icônes à l'intérieur des cercles jaunes */
+}
+
+
+/* Texte sous les cartes */
+#valeurs-ampro h3 {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+}
+
+/* Ajustements responsives si nécessaire */
+@media (max-width: 768px) {
+    .ampro-about-image-container {
+        padding: 0; /* Supprime le padding sur mobile si l'image prend toute la largeur */
+    }
+    .ampro-about-image-container::before,
+    .ampro-about-image-container::after {
+        display: none; /* Cache les bordures colorées sur mobile pour éviter les débordements */
+    }
+}
+
+/* Couleurs du footer */
+.footer-top {
+    background-color: #FFFF00; /* Jaune */
+    padding: 10px 0;
+}
+
+.footer-bottom {
+    background-color: #6a0dad; /* Violet */
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #f8d7da; /* Couleur au survol */
+}
+
+.footer-logo {
+    max-height: 50px; /* Taille de votre logo dans le footer */
+}
+
+
+/* Styles pour la page Projets */
+
+/* Styles pour la page Projets */
+
+/* En-tête de la page projets */
+.projets-header {
+    background-color: #6a0dad; /* Violet foncé */
+    border-bottom: 5px solid #FFFF00; /* Ligne jaune en bas */
+}
+
+/* Call to Action (CTA) */
+.contact-cta {
+    background-color: #6a0dad; /* Violet foncé */
+}
+
+.contact-cta .btn-light {
+    color: #6a0dad;
+    background-color: #fff;
+}
+
+/* --- Styles pour les images de projets --- */
+
+/* Conteneur du cadre (le cadre noir) */
+.projet-image-card {
+    position: relative;
+    padding: 10px; /* Espace pour le cadre */
+    background-color: #000; /* Cadre noir */
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre légère comme sur l'image */
+}
+
+/* L'image elle-même, qui se trouve à l'intérieur du cadre */
+.projet-image-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* --- Effet au survol (optionnel, pour plus de dynamisme) --- */
+.projet-image-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.projet-image-card:hover {
+    transform: scale(1.02); /* Léger agrandissement au survol */
+}
+
+/* Couleurs spécifiques pour le pied de page */
+.footer-top {
+    background-color: #FFFF00; /* Jaune */
+    padding: 10px 0;
+}
+
+.footer-bottom {
+    background-color: #6a0dad; /* Violet */
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #f8d7da; /* Couleur au survol */
+}
+
+
+/* Styles pour la page Compétences */
+
+
+/* NOUVEAU STYLE POUR LE CERCLE JAUNE */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFFF00; /* Fond jaune */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles pour les icônes à l'intérieur du cercle */
+.icon-circle i {
+    color: #6a0dad; /* Icône en violet */
+    font-size: 24px;
+}
+
+
+
+
+/* Styles pour la page Compétences */
+
+/* Titre de la page */
+.competences-title {
+    color: #6a0dad;
+    font-weight: bold;
+    border-bottom: 3px solid #FFFF00;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Styles pour chaque bloc de compétence */
+.competence-block {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    background-color: #fff;
+}
+
+/* Bloc icône et titre (colonne de gauche) */
+.competence-icon {
+    background-color: #f7f7f7;
+    border-right: 1px solid #ddd;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 2rem 1rem;
+    color: #6a0dad; /* Couleur du texte et des icônes */
+    font-weight: bold;
+}
+
+.competence-icon h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+/* Bloc liste (colonne de droite) */
+.competence-list {
+    padding-left: 2rem;
+}
+
+.competence-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+.competence-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Styles pour les écrans plus petits */
+@media (max-width: 768px) {
+    .competence-icon {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .competence-list {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+
+/* Styles pour la page Contact */
+
+/* Titre de la page */
+.contact-title {
+    color: #000;
+    font-weight: bold;
+    border-bottom: 3px solid #6a0dad; /* Ligne violette sous le titre */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Section des informations de contact */
+.contact-info-block {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.contact-info-block:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFFF00; /* Fond jaune */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icon-circle i {
+    color: #6a0dad; /* Icône en violet */
+    font-size: 24px;
+}
+
+
+
+/* Formulaire de contact */
+.contact-form {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 2.5rem;
+    background-color: #f8f9fa;
+}
+
+.contact-form-input {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    background-color: #f7f7f7;
+}
+
+.contact-form-input::placeholder {
+    color: #6c757d;
+}
+
+.contact-form-input:focus {
+    border-color: #6a0dad;
+    box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.25);
+}
+
+.contact-send-btn {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.75rem 0;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-send-btn:hover {
+    background-color: #7b2cde;
+    border-color: #7b2cde;
+}
+
+/* Styles pour le footer */
+.footer-top {
+    background-color: #FFFF00;
+    padding: 10px 0;
+}
+
+.footer-bottom {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #f8d7da;
+}
