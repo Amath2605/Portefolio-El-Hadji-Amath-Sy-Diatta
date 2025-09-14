@@ -7,11 +7,11 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5f5f5;
-            padding-top: 80px; /* Ajustez cette valeur si nécessaire */
+            padding-top: 78px; /* Ajustez cette valeur si nécessaire */
         }
 
         .navbar {
-            background: linear-gradient(135deg, #f7dc6f 0%, #f4d03f 100%);
+            background: linear-gradient(135deg, #FCF465 0%, #FCF465 100%);
             padding: 12px 20px;
             display: flex;
             align-items: center;
@@ -81,7 +81,7 @@
         }
 
         .nav-item:not(.active):hover {
-            background: white;
+            background: #330CEF;
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
@@ -125,12 +125,36 @@
 
 
 
-        #accueil {
-    background-color: #f8f9fa; /* Couleur de fond */
-    height: 100vh; /* La hauteur de la section est égale à la hauteur de la fenêtre du navigateur */
-    display: flex; /* Utilise Flexbox pour un alignement facile */
-    align-items: center; /* Aligne le contenu verticalement au centre */
-    padding-top: 56px; /* Ajoute un espace en haut pour compenser la barre de navigation fixe */
+#accueil {
+    background-image: url('BG\ image.jpg'); /* <-- Remplacez 'background-home.jpg' par le chemin de votre image */
+    background-size: cover; /* L'image couvrira toute la section */
+    background-position: center; /* L'image sera centrée */
+    background-repeat: no-repeat; /* L'image ne se répétera pas */
+    background-color: #f8f9fa; /* Couleur de secours si l'image ne charge pas */
+    min-height: calc(85vh - 76px);
+    display: flex;
+    align-items: center;
+    padding-top: 76px;
+    position: relative; /* Ajouté pour le calque de surbrillance */
+    z-index: 0; /* Assure que le calque de surbrillance est sous le contenu */
+}
+
+/* Optionnel : Ajoutez un calque de surbrillance (overlay) si l'image est trop chargée ou trop claire */
+#accueil::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Calque blanc semi-transparent */
+    z-index: 1; /* Place le calque au-dessus de l'image mais sous le texte/image de profil */
+}
+
+/* S'assure que le contenu (texte, boutons, image de profil) est au-dessus de l'overlay */
+#accueil .container {
+    position: relative;
+    z-index: 2;
 }
 
 #accueil h1 {
@@ -139,13 +163,13 @@
 
 /* Styles pour les boutons personnalisés */
 #accueil .btn-primary {
-    background-color: #4b4b4b;
+    background-color: #330CEF;
     border-color: #4b4b4b;
     color: #fff;
 }
 
 #accueil .btn-primary:hover {
-    background-color: #333;
+    background-color: #8570f1 ;
     border-color: #333;
 }
 
@@ -155,7 +179,7 @@
 }
 
 #accueil .btn-outline-dark:hover {
-    background-color: #333;
+    background-color: #8570f1 ;
     color: #fff;
 }
 
@@ -204,13 +228,31 @@
     font-size: 1rem; /* Adjust font size for list items */
 }
 
-#a-propos .card i.text-primary {
-    color: #4b4b4b !important; /* Set the icon color to the primary dark gray */
-    font-size: 1.25rem; /* Make the icon a bit larger */
+/* Styles pour la section À Propos - Cercle autour des icônes */
+#a-propos .icon-circle-about {
+    width: 45px; /* Taille du cercle */
+    height: 45px; /* Taille du cercle */
+    border-radius: 50%; /* Rendre le conteneur circulaire */
+    background-color: #FCF465; /* Couleur jaune pour le fond du cercle */
+    display: flex; /* Utilise Flexbox pour centrer l'icône */
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Empêche le cercle de rétrécir */
+}
+
+#a-propos .icon-circle-about i {
+    color: #6a0dad; /* Couleur violette pour l'icône */
+    font-size: 1.25rem; /* Taille de l'icône */
+}
+
+/* Ajuste l'alignement pour que l'icône et le texte soient sur la même ligne */
+#a-propos .card-body div.d-flex,
+#a-propos .card-body li.d-flex {
+    align-items: center;
 }
 
 #a-propos .btn-dark {
-    background-color: #4b4b4b; /* Dark gray background for the button */
+    background-color: #330CEF; /* Dark gray background for the button */
     border-color: #4b4b4b; /* Matching border color */
     color: #fff; /* White text color */
     padding: 12px 30px; /* Add padding for a larger button */
@@ -229,25 +271,25 @@
 }
 
 #projets h2 {
-    color: #4b4b4b; /* Couleur du titre principal */
+    color: #330CEF; /* Couleur du titre principal */
     font-weight: 700;
     margin-bottom: 3rem; /* Espace sous le titre */
 }
 
 /* Styles pour les boutons de filtre */
 #projets .btn {
-    border: 1px solid #4b4b4b; /* Bordure des boutons */
+    border: 1px solid #330CEF; /* Bordure des boutons */
     color: #4b4b4b; /* Couleur du texte des boutons */
     font-weight: 500;
 }
 
 #projets .btn.btn-dark {
-    background-color: #4b4b4b; /* Couleur de fond du bouton actif (Tous) */
+    background-color: #330CEF; /* Couleur de fond du bouton actif (Tous) */
     color: #fff; /* Couleur du texte du bouton actif */
 }
 
 #projets .btn.btn-outline-dark:hover {
-    background-color: #4b4b4b; /* Couleur de fond au survol */
+    background-color: #330CEF; /* Couleur de fond au survol */
     color: #fff; /* Couleur du texte au survol */
 }
 
@@ -277,7 +319,7 @@
 
 /* Styles pour les badges (étiquettes) */
 #projets .badge.bg-primary {
-    background-color: #4b4b4b !important; /* Couleur de fond des badges */
+    background-color: #330CEF !important; /* Couleur de fond des badges */
     color: #fff;
     font-weight: normal;
     padding: 0.5em 1em; /* Ajoute de l'espace à l'intérieur des badges */
@@ -285,7 +327,7 @@
 }
 
 #projets .btn.btn-outline-dark {
-    border-color: #4b4b4b; /* Bordure du bouton "Voir le projet" */
+    border-color: #330CEF; /* Bordure du bouton "Voir le projet" */
     color: #4b4b4b; /* Couleur du texte */
 }
 
@@ -293,6 +335,73 @@
     background-color: #4b4b4b;
     color: #fff;
 }
+
+
+/* NOUVEAU STYLE POUR L'IMAGE DE PROFIL DE LA PAGE D'ACCUEIL */
+
+/* Conteneur pour l'image et son arrière-plan */
+.profile-image-container {
+    position: relative;
+    width: 400px; /* Ajustez cette largeur pour contrôler la taille du conteneur */
+    height: 450px; /* Ajustez cette hauteur */
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* L'image elle-même */
+.profile-image-container .profile-image {
+    position: relative;
+    z-index: 2; /* L'image est au-dessus du rectangle */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Pseudo-élément pour la forme rectangulaire derrière l'image */
+.profile-image-container::before {
+    content: '';
+    position: absolute;
+    top: 255px; /* Décalage vers le bas */
+    left: 20px; /* Décalage vers la droite */
+    width: 100%;
+    height: 60%;
+    background-color: #330CEF; /* Couleur jaune */
+    border-radius: 10px;
+    z-index: 1; /* Le rectangle est derrière l'image */
+}
+
+
+/* Ajustements responsive pour les petits écrans */
+@media (max-width: 991.98px) {
+    .profile-image-container {
+        width: 280px;
+        height: 380px;
+    }
+
+    .profile-image-container::before {
+        top: 15px;
+        left: 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .profile-image-container {
+        width: 250px;
+        height: 350px;
+    }
+
+    .profile-image-container::before {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+
+
 
 /* compétences */
 /* Section Compétences */
@@ -319,7 +428,7 @@
 }
 
 #competences .progress-bar {
-    background-color: #4b4b4b; /* Couleur de la barre de progression */
+    background-color: #330CEF; /* Couleur de la barre de progression */
 }
 
 /* Styles pour la section des outils */
@@ -411,7 +520,7 @@
 
 /* Bande jaune */
 .footer-top {
-  background-color: #fff26e; /* jaune */
+  background-color: #FCF465; /* jaune */
   height: 100px;
 }
 
@@ -438,13 +547,47 @@
 }
 
 .footer-links a:hover {
-  color: #ffea00; /* survol = jaune */
+  color: #FCF465; /* survol = jaune */
   text-decoration: underline;
 }
 
 /*Page de apropos*/
 
 /* --- Styles pour la section À Propos de AMPRO --- */
+
+
+/* Styles pour les cartes d'outils */
+#competences .tool-card {
+    background-color: #f0f0f0; /* Couleur de fond gris clair */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 1.5rem 1rem; /* Espacement intérieur */
+    text-align: center; /* Centre le contenu (icône et texte) */
+    transition: transform 0.3s ease; /* Effet de transition au survol */
+}
+
+#competences .tool-card:hover {
+    transform: translateY(-5px); /* Effet de soulèvement au survol */
+}
+
+#competences .tool-card i {
+    color: #6a0dad; /* Couleur violette pour l'icône */
+    font-size: 3rem; /* Taille de l'icône */
+    display: block; /* Permet un bon espacement avec le texte */
+    margin-bottom: 0.5rem; /* Espacement sous l'icône */
+}
+
+#competences .tool-card p {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
 
 /* Conteneur de l'image avec les bordures colorées */
 .ampro-about-image-container {
@@ -479,7 +622,7 @@
     left: 0;
     width: 100%;
     height: 8px; /* Épaisseur de la bordure */
-    background-color: #FFFF00; /* Jaune */
+    background-color: #FCF465; /* Jaune */
     z-index: 1;
 }
 
@@ -531,20 +674,20 @@
 
 /* Couleurs spécifiques pour chaque icône */
 .ampro-card:nth-child(1) .icon-circle { /* Mission */
-    background-color: #FFFF00; /* Jaune */
-    border-color: #FFFF00;
+    background-color: #FCF465; /* Jaune */
+    border-color: #FCF465;
     color: #6a0dad; /* Icône violette */
 }
 
 .ampro-card:nth-child(2) .icon-circle { /* Valeurs */
-    background-color: #FFFF00; /* Jaune */
-    border-color: #FFFF00;
+    background-color: #FCF465; /* Jaune */ 
+    border-color: #FCF465;
     color: #6a0dad; /* Icône violette */
 }
 
 .ampro-card:nth-child(3) .icon-circle { /* Impacts */
-    background-color: #FFFF00; /* Jaune */
-    border-color: #FFFF00;
+    background-color: #FCF465; /* Jaune */
+    border-color: #FCF465;
     color: #6a0dad; /* Icône violette */
 }
 
@@ -574,7 +717,7 @@
 
 /* Couleurs du footer */
 .footer-top {
-    background-color: #FFFF00; /* Jaune */
+    background-color: #FCF465; /* Jaune */
     padding: 10px 0;
 }
 
@@ -606,7 +749,7 @@
 /* En-tête de la page projets */
 .projets-header {
     background-color: #6a0dad; /* Violet foncé */
-    border-bottom: 5px solid #FFFF00; /* Ligne jaune en bas */
+    border-bottom: 5px solid #FCF465; /* Ligne jaune en bas */
 }
 
 /* Call to Action (CTA) */
@@ -648,7 +791,7 @@
 
 /* Couleurs spécifiques pour le pied de page */
 .footer-top {
-    background-color: #FFFF00; /* Jaune */
+    background-color: #FCF465; /* Jaune */
     padding: 10px 0;
 }
 
@@ -677,7 +820,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #FFFF00; /* Fond jaune */
+    background-color: #FCF465; /* Fond jaune */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -698,7 +841,7 @@
 .competences-title {
     color: #6a0dad;
     font-weight: bold;
-    border-bottom: 3px solid #FFFF00;
+    border-bottom: 3px solid #FCF465;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -788,7 +931,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #FFFF00; /* Fond jaune */
+    background-color: #FCF465; /* Fond jaune */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -844,7 +987,7 @@
 
 /* Styles pour le footer */
 .footer-top {
-    background-color: #FFFF00;
+    background-color: #FCF465;
     padding: 10px 0;
 }
 
