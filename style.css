@@ -166,21 +166,25 @@
     background-color: #330CEF;
     border-color: #4b4b4b;
     color: #fff;
+    padding: 12px 30px;
 }
 
 #accueil .btn-primary:hover {
-    background-color: #8570f1 ;
+    background-color: #330CEF ;
     border-color: #333;
+    padding: 12px 30px;
 }
 
 #accueil .btn-outline-dark {
     color: #333;
     border-color: #333;
+    padding: 12px 30px;
 }
 
 #accueil .btn-outline-dark:hover {
-    background-color: #8570f1 ;
+    background-color: #330CEF ;
     color: #fff;
+    padding: 12px 30px;
 }
 
 /* Styles pour l'image du portrait */
@@ -281,16 +285,19 @@
     border: 1px solid #330CEF; /* Bordure des boutons */
     color: #4b4b4b; /* Couleur du texte des boutons */
     font-weight: 500;
+    padding: 12px 30px;
 }
 
 #projets .btn.btn-dark {
     background-color: #330CEF; /* Couleur de fond du bouton actif (Tous) */
     color: #fff; /* Couleur du texte du bouton actif */
+    padding: 12px 30px;
 }
 
 #projets .btn.btn-outline-dark:hover {
     background-color: #330CEF; /* Couleur de fond au survol */
     color: #fff; /* Couleur du texte au survol */
+    padding: 12px 30px;
 }
 
 /* Styles pour les cartes de projet */
@@ -322,18 +329,21 @@
     background-color: #330CEF !important; /* Couleur de fond des badges */
     color: #fff;
     font-weight: normal;
-    padding: 0.5em 1em; /* Ajoute de l'espace à l'intérieur des badges */
+     /* Ajoute de l'espace à l'intérieur des badges */
     border-radius: 20px; /* Rend les badges ronds */
+    padding: 18px 40px;
 }
 
 #projets .btn.btn-outline-dark {
     border-color: #330CEF; /* Bordure du bouton "Voir le projet" */
     color: #4b4b4b; /* Couleur du texte */
+    padding: 12px 30px;
 }
 
 #projets .btn.btn-outline-dark:hover {
     background-color: #4b4b4b;
     color: #fff;
+    padding: 12px 30px;
 }
 
 
@@ -570,7 +580,7 @@
 }
 
 #competences .tool-card i {
-    color: #6a0dad; /* Couleur violette pour l'icône */
+    color: #330CEF; /* Couleur violette pour l'icône */
     font-size: 3rem; /* Taille de l'icône */
     display: block; /* Permet un bon espacement avec le texte */
     margin-bottom: 0.5rem; /* Espacement sous l'icône */
@@ -628,16 +638,16 @@
 
 /* Styles du bouton CONTACTEZ-NOUS */
 #apropos-ampro .btn-primary {
-    background-color: #6a0dad; /* Violet foncé */
-    border-color: #6a0dad;
+    background-color: #330CEF; /* Violet foncé */
+    border-color: #330CEF;
     font-weight: bold;
     letter-spacing: 1px;
     transition: background-color 0.3s ease;
 }
 
 #apropos-ampro .btn-primary:hover {
-    background-color: #7b2cde; /* Violet un peu plus clair au survol */
-    border-color: #7b2cde;
+    background-color: #330CEF; /* Violet un peu plus clair au survol */
+    border-color: #330CEF;
 }
 
 /* --- Styles pour la section Mission, Valeurs, Impacts --- */
@@ -676,23 +686,23 @@
 .ampro-card:nth-child(1) .icon-circle { /* Mission */
     background-color: #FCF465; /* Jaune */
     border-color: #FCF465;
-    color: #6a0dad; /* Icône violette */
+    color: #330CEF; /* Icône bleu */
 }
 
 .ampro-card:nth-child(2) .icon-circle { /* Valeurs */
     background-color: #FCF465; /* Jaune */ 
     border-color: #FCF465;
-    color: #6a0dad; /* Icône violette */
+    color: #330CEF; /* Icône violette */
 }
 
 .ampro-card:nth-child(3) .icon-circle { /* Impacts */
     background-color: #FCF465; /* Jaune */
     border-color: #FCF465;
-    color: #6a0dad; /* Icône violette */
+    color: #330CEF; /* Icône violette */
 }
 
 .ampro-card .icon-circle i {
-    color: #6a0dad; /* Couleur des icônes à l'intérieur des cercles jaunes */
+    color: #330CEF; /* Couleur des icônes à l'intérieur des cercles jaunes */
 }
 
 
@@ -722,7 +732,7 @@
 }
 
 .footer-bottom {
-    background-color: #6a0dad; /* Violet */
+    background-color: #330CEF; /* Violet */
     color: #fff;
     padding: 20px 0;
 }
@@ -748,17 +758,17 @@
 
 /* En-tête de la page projets */
 .projets-header {
-    background-color: #6a0dad; /* Violet foncé */
+    background-color: #330CEF; /* Violet foncé */
     border-bottom: 5px solid #FCF465; /* Ligne jaune en bas */
 }
 
 /* Call to Action (CTA) */
 .contact-cta {
-    background-color: #6a0dad; /* Violet foncé */
+    background-color: #330CEF; /* Violet foncé */
 }
 
 .contact-cta .btn-light {
-    color: #6a0dad;
+    color: #330CEF;
     background-color: #fff;
 }
 
@@ -796,7 +806,7 @@
 }
 
 .footer-bottom {
-    background-color: #6a0dad; /* Violet */
+    background-color: #330CEF; /* Violet */
     color: #fff;
     padding: 20px 0;
 }
@@ -828,7 +838,7 @@
 
 /* Styles pour les icônes à l'intérieur du cercle */
 .icon-circle i {
-    color: #6a0dad; /* Icône en violet */
+    color: #330CEF; /* Icône en violet */
     font-size: 24px;
 }
 
@@ -839,7 +849,7 @@
 
 /* Titre de la page */
 .competences-title {
-    color: #6a0dad;
+    color: #330CEF;
     font-weight: bold;
     border-bottom: 3px solid #FCF465;
     display: inline-block;
@@ -861,7 +871,7 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 2rem 1rem;
-    color: #6a0dad; /* Couleur du texte et des icônes */
+    color: #330CEF; /* Couleur du texte et des icônes */
     font-weight: bold;
 }
 
@@ -909,7 +919,7 @@
 .contact-title {
     color: #000;
     font-weight: bold;
-    border-bottom: 3px solid #6a0dad; /* Ligne violette sous le titre */
+    border-bottom: 3px solid #330CEF; /* Ligne violette sous le titre */
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -938,7 +948,7 @@
 }
 
 .contact-icon-circle i {
-    color: #6a0dad; /* Icône en violet */
+    color: #330CEF; /* Icône en violet */
     font-size: 24px;
 }
 
@@ -965,13 +975,13 @@
 }
 
 .contact-form-input:focus {
-    border-color: #6a0dad;
+    border-color: #330CEF;
     box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.25);
 }
 
 .contact-send-btn {
-    background-color: #6a0dad;
-    border-color: #6a0dad;
+    background-color: #330CEF;
+    border-color: #330CEF;
     font-weight: bold;
     font-size: 1.2rem;
     padding: 0.75rem 0;
@@ -981,8 +991,8 @@
 }
 
 .contact-send-btn:hover {
-    background-color: #7b2cde;
-    border-color: #7b2cde;
+    background-color: #330CEF;
+    border-color: #330CEF;
 }
 
 /* Styles pour le footer */
@@ -992,7 +1002,7 @@
 }
 
 .footer-bottom {
-    background-color: #6a0dad;
+    background-color: #330CEF;
     color: #fff;
     padding: 20px 0;
 }
